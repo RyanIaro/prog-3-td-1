@@ -4,6 +4,7 @@ import app.prog.controller.response.BookResponse;
 import app.prog.controller.response.CreateBookResponse;
 import app.prog.controller.response.UpdateBookResponse;
 import app.prog.model.BookEntity;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -12,7 +13,7 @@ public class BookRestMapper {
         return BookResponse.builder()
                 .id(domain.getId())
                 .title(domain.getTitle())
-                .author(domain.getAuthor())
+                .author(domain.getAuthor().getName())
                 .hasAuthor(domain.hasAuthor())
                 .build();
     }

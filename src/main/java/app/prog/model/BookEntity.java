@@ -23,7 +23,7 @@ public class BookEntity {
     // Must know : a book can have only one author but an author can have many books
     @ManyToOne
     @JoinColumn(name = "id")
-    private String author;
+    private AuthorEntity author;
     private Integer pageNumber;
     private LocalDate releaseDate;
 
