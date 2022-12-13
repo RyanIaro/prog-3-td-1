@@ -21,7 +21,7 @@ public class BookEntity {
     private String title;
     //TODO-6: join BookEntity with AuthorEntity and make the correct change so that the API does not change
     // Must know : a book can have only one author but an author can have many books
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "id")
     private String author;
     private Integer pageNumber;
